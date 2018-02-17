@@ -54,5 +54,33 @@ Once you want to add remote URL on to your local repository you can use followin
 	$ git push origin <branch name>
 
 
+## Clone repo from the remote 
+
+If you want to clone new project on to your local you can use following command
+
+
+	$ git clone <remote repo url> /local/location/
+
+if you want to clone specific branch 
+
+	$ git clone -b <branch name> <remote repo url> /local/location/
+
+
+
+## Get remote branches on to your local 
+
+If you want to fetch origins branch on to your local you can use
+
+ 	$ git fetch origin <branch Name>
+ 	$ git checkout <branch name>
+
+
+If you want to fetch all the branches that are in remote repo
+
+	$ git fetch origin 
+
+if you list branches you will see all the remote branches are in your local repo
+
+	$ git branch
 
 
