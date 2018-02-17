@@ -9,4 +9,4 @@ $ git add <file name>
 
 Track the files
 
-$ git commit -a  or -am "description"
+$ git commit -a / -am "Description"
