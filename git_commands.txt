@@ -34,6 +34,12 @@ switch between branches
 $ git checkout <branch name>
 
 
+Add remote URL to the local git repo and push branch
+
+$ git add remote <URL>
+$ git push origin <branch name>
+
+
 
 To Merge two branches
 
