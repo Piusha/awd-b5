@@ -1,48 +1,50 @@
 
-initialize git
+#Git Basics
 
-$ git init
+##initialize git
 
-Check the current branch status
+	$ git init
 
-$ git status
+##Check the current branch status
 
-
-Add files to the git
-
-$ git add <file name>
-
-Track the files
-
-$ git commit -a / -am "Description"
-
-create new branches
-
-$ git checkout -b <branch Name>
-$ git status
+	$ git status
 
 
-do the changes on new branch  and commit
+##Add files to the git
+
+	$ git add <file name>
+
+##Track the files
+
+	$ git commit -a / -am "Description"
+
+##create new branches
+
+	$ git checkout -b <branch Name>
+	$ git status
+
+
+##Do the changes on new branch  and commit
 
 
 check branches in your local git repo
 
-$ git branch
+	$ git branch
 
 switch between branches
 
-$ git checkout <branch name>
+	$ git checkout <branch name>
 
 
-Add remote URL to the local git repo and push branch
+##Add remote URL to the local git repo and push branch
 
-$ git remote add origin <URL>
-$ git push origin <branch name>
+	$ git remote add origin <URL>
+	$ git push origin <branch name>
 
 
 
-To Merge two branches
+##To Merge two branches
 
-$ git merge <branch name>
+	$ git merge <branch name>
 
 
