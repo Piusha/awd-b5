@@ -83,4 +83,10 @@ if you list branches you will see all the remote branches are in your local repo
 
 	$ git branch
 
+## Get Remote changes to the local 
+
+If there is any modification on the remote branch and if you want to update your local repo with those changes, then you hvae to pull the changes
+
+	$ git pull origin <branch_name>
+
 
