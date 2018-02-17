@@ -36,7 +36,7 @@ $ git checkout <branch name>
 
 Add remote URL to the local git repo and push branch
 
-$ git add remote <URL>
+$ git remote add origin <URL>
 $ git push origin <branch name>
 
 
