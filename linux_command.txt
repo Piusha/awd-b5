@@ -104,3 +104,41 @@ rm test2/t.
 ll
 ll test2
 
+
+
+sudo useradd -m <newuser>
+sudo passwd <newuser>
+
+switch to new user 
+su <newuser>
+
+logout from user 
+exit
+Change file and directory permissions
+
+wrx wrx wrx
+g   u   o
+
+g - group owner 
+u - file owner
+o - other users
+a - all users
+
+In Numarical representation
+w - 4
+r - 2
+x - 1
+
+
+
+chmod 777 b
+chmod -R 777 b
+chmod -R 777 ./b
+
+chmod -R 777 ./b
+sudo chmod -R 777 ./b
+
+give read permission for other users for a file direcotry
+
+sudo chmod o+r a
+
