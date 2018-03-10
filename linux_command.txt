@@ -47,3 +47,60 @@ cd web/
 ll
 clear
 history
+
+
+
+who
+ll
+cd web/
+clear
+ll
+history
+clear
+ll
+cat linux_command.txt 
+clear
+ll
+nano linux_command.txt 
+ll
+touch test.txt
+ll
+nano test2.txt
+ll
+cat test.txt 
+cat test2.txt 
+nano test2.txt
+cat test2.txt `
+cat test2.txt 
+l
+clear
+ll
+rm test.txt 
+ll
+rm test2.txt 
+ll
+touch t.1
+touch t.2
+ll
+cd /
+cd ~
+pwd
+rm /web/t.1
+rm /web/t.2
+ll /web/
+cd ../../
+cd web/
+ll
+mkdir test1
+mkdir test2
+cd test1/
+touch t.1
+touch t.2
+cd ../
+cp test1/t.1 test2/
+ll test2
+ll test1
+rm test2/t.
+ll
+ll test2
+
