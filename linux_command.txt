@@ -1,0 +1,49 @@
+clear
+cd /
+ls
+ls -al
+cd web/
+ls
+cd ..
+clear
+date
+cd web/
+cd ..
+cd web/vagrantconfig/
+pwd
+history
+clear
+pwd
+cd /
+cd /web/vagrantconfig/
+pwd
+ls /etc/
+ls -al /etc/
+ll /etc/
+ll
+ls -al
+ll
+clear
+cd /etc/
+ll
+cd /
+clear
+ll
+cd /web/
+clear
+ll
+mkdir linux_examples
+ll
+rm linux_examples
+rm -f linux_examples
+rm -rf linux_examples
+ll
+clear
+mkdir tes
+cd ..
+rm -rf /web/test
+rm -rf /
+cd web/
+ll
+clear
+history
