@@ -142,3 +142,6 @@ give read permission for other users for a file direcotry
 
 sudo chmod o+r a
 
+#Filters
+
+##grep filter
