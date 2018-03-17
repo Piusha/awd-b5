@@ -1,4 +1,4 @@
-#Setup Vagrant 
+# Setup Vagrant 
 
 
 Download vagrant  and  virtual box 5.1 

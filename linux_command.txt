@@ -142,6 +142,37 @@ give read permission for other users for a file direcotry
 
 sudo chmod o+r a
 
-#Filters
+Standard Files 
 
-##grep filter
+There are 3 type of etandard file types
+
+Standard input - 0
+ex
+$ cat <enter>
+it wait for user to enter somthing
+
+Standard output - 1
+ex
+$ ls <enter>
+it show all infor on the screen(console) 
+
+Standard error  - 2
+ex
+$ sdasd <enter>
+this show command not found error
+
+Redirection
+
+input Redirection
+$ cat < <file name>
+
+output Redirection
+$ ll >> test.txt
+
+error Redirection
+
+$sdasd 2> error.txt
+
+Filters
+----------------------
+grep filter
