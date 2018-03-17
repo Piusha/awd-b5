@@ -11,25 +11,25 @@ Make sure to enable virtualization through CMOS setup on your PC
 
 After all done use following commands to setup 
 
-###vagrant up
+## vagrant up
 
 To download os and setup 
 
     $ vagrant up
 
-###vagrant ssh
+## vagrant ssh
 
 login to the vagrant box. this command need to run while you are in Vagrantfile location 
 
     $ vagrant ssh
 
-###exit
+## exit
 
 Logout from the Ubuntu machine
 
     $ exit
 
-###vagrant halt
+## vagrant halt
 
 shutdown vagrant machine
 
