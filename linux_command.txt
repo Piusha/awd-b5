@@ -176,3 +176,16 @@ $sdasd 2> error.txt
 Filters
 ----------------------
 grep filter
+find specific word or character from the list
+
+$ grep New<REGULAR EXPRESSION>
+
+
+
+wc filter (count nof lines words characters)
+$ wc <file Name>
+
+cut filter
+
+$ cut -f1 ./ls_.txt 
+$ cut -f1 -d " " ./ls_.txt 
