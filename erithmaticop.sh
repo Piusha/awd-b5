@@ -1,9 +1,10 @@
 #!/bin/bash
-read -p "enter value : " x y
+read -p "enter value : " a b
 
 
 
-ans=`expr $x + $y`
+#ans=`expr $x + $y`
 #ans=$((x + y)) 
+ans=$[ a == b ]
 
-echo "$x + $y = $ans"
+echo "$a + $b = $ans"

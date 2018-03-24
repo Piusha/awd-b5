@@ -39,12 +39,12 @@
 <tr>
 <td class="ts">== (Equality)</td>
 <td>Compares two numbers, if both are same then returns true.</td>
-<td>[ $a == $b ] would return false.</td>
+<td>$[ a == b ] would return false.</td>
 </tr>
 <tr>
 <td class="ts">!= (Not Equality)</td>
 <td>Compares two numbers, if both are different then returns true.</td>
-<td>[ $a != $b ] would return true.</td>
+<td>$[ a != b ] would return true.</td>
 </tr>
 </tbody></table>
 
