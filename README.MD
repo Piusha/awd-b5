@@ -55,6 +55,8 @@ Example
 
 ## Relational Operators
 
+These operators do not work for string values unless their value is numeric.
+
 <table class="table table-bordered">
 <tbody><tr>
 <th style="text-align:center;">Operator</th>
