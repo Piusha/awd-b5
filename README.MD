@@ -26,7 +26,7 @@ Change Virtual Host
 
     <VirtualHost *:80>
         ServerAdmin admin@example.com
-        ServerName b5.awd.com.conf
+        ServerName b5.awd.com
         #ServerAlias www.example.com
         DocumentRoot /var/www/b5.awd.com
         ErrorLog ${APACHE_LOG_DIR}/error.log
