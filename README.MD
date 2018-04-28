@@ -43,3 +43,16 @@ Destructor − refers to a special type of function which will be called automat
 Install php CURL
 
     $ sudo apt-get install php-curl
+
+
+# Entity Class
+
+ entity classes are combined key/value classes that are managed by entity bindings. In this example the Part, Supplier and Shipment classes are entity classes. These classes contain fields that are a union of the fields of the key and value classes that were defined earlier for each store
+ 
+ Some reasons for using entities are:
+
+* When the key is a property of an entity object representing the record as a whole, the object's identity and concept are often clearer than with key and value objects that are disjoint.
+* A single entity object per record is often more convenient to use than two objects.
+
+
+(more)[https://docs.oracle.com/cd/E17277_02/html/collections/tutorial/Entity.html]
