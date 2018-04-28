@@ -1,18 +1,18 @@
 <?php
 namespace Model;
+
 use Core\Model;
+use Lib\ApiExecutor;
+use Entity\UserEntity;
 
 class User extends Model{
 
-    private $firstName  = "";
-    private $lastName   = "";
-    protected $table = "users";
+    
+    private $users = [];
 
     public $age = 0;
-    function __construct($_firstName = "" , $_lastName = ""){
+    function __construct(){
         parent::__construct();
-        $this->firstName    = $_firstName;
-        $this->lastName     = $_lastName;     
     }
 
 
@@ -25,6 +25,34 @@ class User extends Model{
 
 
     }
+
+    public function addUsers($userEntity){
+        $this->users[] = $userEntity;
+    }
+
+    public function getAllUsers(){
+        $api = new ApiExecutor();
+        $apiUserData = $api->execute('https://reqres.in/api/users?page=1','GET');
+
+        if(isset($apiUserData['data'])){
+            
+            foreach($apiUserData['data'] as  $user){
+                
+                $this->users[] =  new UserEntity(
+                    $user['id'],
+                    $user['first_name'],
+                    $user['last_name'],
+                    $user['avatar']
+                );
+            }
+            return $this->users;
+
+        }
+        return null;
+        
+    }
+
+
 
 
 }

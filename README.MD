@@ -37,3 +37,9 @@ Destructor − refers to a special type of function which will be called automat
 
 
 (more)[https://github.com/marcelgsantos/learning-oop-in-php]
+
+
+
+Install php CURL
+
+    $ sudo apt-get install php-curl
