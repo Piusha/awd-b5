@@ -8,24 +8,31 @@
 
 namespace Core;
 
-class Model{
-
-    private $con = null;
+use Core\DB\MySql;
+abstract class Model extends Mysql{
+    
     protected $table = null;
+    private $db = null;
+    private $select = "";
     function __construct(){
-        $this->con = 'Connection Stablished <br/>';
+        $this->db = $this->getConnection();
     }
 
 
-    /**
-     * Get current opned connection
-     */
-    protected function getConnection(){
-        return $this->con;
+    public function select($select = '*'){
+        $this->select = $select;
+        return $this;
     }
 
-    public function getTableName(){
-        return $this->table;
+    private function prepareSelectQuery(){
+        return  "SELECT  $this->select  FROM  $this->table ";
     }
+    public function find(){
+
+        $this->preapareStatement($this->prepareSelectQuery());
+        return $this->fetchData();
+
+    }
+
 
 }
