@@ -13,7 +13,8 @@ abstract class Model extends Mysql{
     
     protected $table = null;
     private $db = null;
-    private $select = "";
+    private $select = null;
+    private $entity = null;
     function __construct(){
         $this->db = $this->getConnection();
     }
@@ -24,13 +25,18 @@ abstract class Model extends Mysql{
         return $this;
     }
 
+    public function setEntity($entity){
+        $this->entity = $entity;
+        return $this;
+    }
+
     private function prepareSelectQuery(){
         return  "SELECT  $this->select  FROM  $this->table ";
     }
     public function find(){
 
         $this->preapareStatement($this->prepareSelectQuery());
-        return $this->fetchData();
+        return $this->fetchData($this->entity);
 
     }
 

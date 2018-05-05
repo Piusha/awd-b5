@@ -51,9 +51,13 @@ abstract class MySql{
         $this->statement->execute();
 
     }
-    public function fetchData(){
-        $this->statement->setFetchMode(PDO::FETCH_ASSOC); 
-        return $this->statement->fetchAll();
+    public function fetchData($entity = null){
+
+        if($entity == null){
+            $this->statement->setFetchMode(PDO::FETCH_ASSOC); 
+            return $this->statement->fetchAll();
+        }
+        return $this->statement->fetchAll(PDO::FETCH_CLASS,$entity);
     }
 
 
