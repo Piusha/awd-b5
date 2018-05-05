@@ -30,9 +30,9 @@ class User extends Model{
         $this->users[] = $userEntity;
     }
 
-    public function getAllUsers(){
+    public function getAllUsers($page =1){
         $api = new ApiExecutor();
-        $apiUserData = $api->execute('https://reqres.in/api/users?page=1','GET');
+        $apiUserData = $api->execute('https://reqres.in/api/users?page='.$page,'GET');
 
         if(isset($apiUserData['data'])){
             
@@ -45,7 +45,11 @@ class User extends Model{
                     $user['avatar']
                 );
             }
-            return $this->users;
+            return [
+                'total_pages'=>$apiUserData['total_pages'],
+                'current_page'=>$apiUserData['page'],
+                'users'=>$this->users
+            ];
 
         }
         return null;
