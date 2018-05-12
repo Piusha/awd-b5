@@ -1,18 +1,24 @@
-# Working with PHP and mysql
 
-Import Mysql data from the external sql file
+# PHP MVC
 
-    $ mysql -u username -p database_name < file.sql
-
-
-## Employee Example
-
-Application Architecture
-
-    Mysql -> Mode   -> EmployeeModel
-                    -> DepartmentModel
-                    -> UserMode
-                    -> ....Model
+## Enable Mode rewrite in apapche
 
 
-Created Mysql and Model as abstract class where it can only extend from the chile class. 
+    $ sudo a2enmod rewrite
+    $ sudo service apache2 restart
+
+## Enable directory listining
+
+
+    <VirtualHost *:80>
+        <Directory /var/www/html>
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride All
+            Require all granted
+        </Directory>
+
+        . . .
+    </VirtualHost>
+
+
+You can fine (More Details)[https://www.digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-16-04] from (here)[https://www.digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-16-04]  
