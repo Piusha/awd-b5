@@ -6,6 +6,7 @@
 namespace Core;
 
 use \Lib\Util;
+
 class Bootstrap {
 
 
@@ -31,6 +32,7 @@ class Bootstrap {
                 require_once $cntrllFileName;
                 $className = "\Controller\\".$fileName;
                 $c = new $className;
+                //$c->loadViewLayer();
                 $this->invokeControllerAction($c,$url);
 
 
