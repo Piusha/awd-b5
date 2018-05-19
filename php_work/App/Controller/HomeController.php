@@ -3,17 +3,23 @@ namespace Controller;
 use \Core\Controller;
 class HomeController extends Controller{
 
-    protected $layout = "test";
+    
     function index(){
-        echo "This is index from home controller";
+        $this->render('pages/home');
     }
 
 
-    public function getUsers($data){
-        //echo $this->view;
-        
+    public function contact($data){
+        $this->render('pages/contact');
+    }
 
+    public function services(){
         $this->render('pages/home');
-        //echo "Found Method and  called<br/> Data = {$data}";
+    }
+    public function elements(){
+        $this->render('pages/home');
+    }
+    public function blog(){
+        $this->render('pages/home');
     }
 }

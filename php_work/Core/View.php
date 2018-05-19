@@ -4,7 +4,7 @@ namespace Core;
 
 abstract class View {
 
-    protected $layout = 'default';
+    protected $layout = 'zeta';
     private $viewName;
 
     public function render($viewName){
