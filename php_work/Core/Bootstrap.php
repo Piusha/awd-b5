@@ -5,20 +5,13 @@
  */
 namespace Core;
 
-
+use \Lib\Util;
 class Bootstrap {
 
 
     function __construct(){
 
-    
-        $url    = isset($_GET["url"]) ? $_GET["url"] : null;
-        $url    = rtrim($url,'/');
-        $url    = explode('/' ,$url);
-
-        echo "<pre>";
-
-        print_r($url);
+        $url = Util::prepareURL();
 
 
         $cntrllFileLocation = 'App/Controller';
@@ -36,15 +29,9 @@ class Bootstrap {
             if(file_exists($cntrllFileName)){
 
                 require_once $cntrllFileName;
-                 
-                
-
-
                 $className = "\Controller\\".$fileName;
                 $c = new $className;
-
-                $c->index();
-
+                $this->invokeControllerAction($c,$url);
 
 
 
@@ -60,6 +47,45 @@ class Bootstrap {
 
 
     }
+
+
+    /**
+     * Invoke Controller actions
+     *
+     * @param [type] $controller
+     * @param [type] $url
+     * @return void
+     */
+    public function invokeControllerAction($controller,$url){
+
+
+        //Check for the 2nd parameter
+        // We assumed that is for URL parameter
+
+        
+        if(isset($url[1])){
+
+            $actionMethod = $url[1];
+            if(method_exists($controller,$actionMethod)){
+            
+                $urlData = (isset($url[2]))?$url[2]:null;
+                $controller->{$actionMethod}($urlData);
+            }else{
+                $this->error404();
+            }
+            //
+        }else{
+
+            $controller->index();
+        }
+
+    }
+
+    public function error404(){
+        
+        echo "OOPs Page not found";
+    }
+    
 
 
 }
