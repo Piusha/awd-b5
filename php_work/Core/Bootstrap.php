@@ -10,47 +10,45 @@ use \Lib\Util;
 class Bootstrap {
 
 
+    private static $cntrllFileLocation = 'App/Controller';
     function __construct(){
 
         $url = Util::prepareURL();
 
-
-        $cntrllFileLocation = 'App/Controller';
-
-
+        if($url == null){
+            $controller = $this->loadController('Home');
+            $controller->index();
+        }
         if(isset($url[0])){
             //Check is file exist
-
-            $fileName   = $url[0].'Controller';
-            $fileName   = ucwords($fileName);
-
-
-            $cntrllFileName = $cntrllFileLocation.'/'.$fileName.'.php';
-            
-            if(file_exists($cntrllFileName)){
-
-                require_once $cntrllFileName;
-                $className = "\Controller\\".$fileName;
-                $c = new $className;
-                //$c->loadViewLayer();
-                $this->invokeControllerAction($c,$url);
-
-
-
-
-            }else{
-
-                echo "Controller file not found";
-            }
-            
+            $controller = $this->loadController($url[0]);
+             //$c->loadViewLayer();
+            $this->invokeControllerAction($controller,$url);
         }
 
-
-
-
     }
+    /**
+     * Load Controller 
+     *
+     * @param [type] $fileName
+     * @return void
+     */
+    private function loadController($fileName){
+        $strControllerName = "{$fileName}Controller";
+        $fileName   = ucwords($strControllerName);
+        $cntrllFileName = Bootstrap::$cntrllFileLocation.'/'.$fileName.'.php';
+        if(file_exists($cntrllFileName)){
+            require_once $cntrllFileName;
+            $className = "\Controller\\".$fileName;
+            return  new $className;
+           
 
+        }else{
 
+            echo "Controller file not found";
+            exit;
+        }
+    }
     /**
      * Invoke Controller actions
      *
