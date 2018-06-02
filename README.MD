@@ -78,10 +78,6 @@ You need to find correct php socket version form the /run/php/ directory.
 
 When you are installing php it get sotred in **/etc/php** location.
 
-## Set correct PHP CLI version
-
-    $  sudo update-alternatives --config php
-
     $ ll /etc/php
 
 You can see currently installed php versions after executing abow command
@@ -98,3 +94,7 @@ Once you start correct php version you need to change following file based on th
 
     fastcgi_pass unix:/run/php/php7.1-fpm.sock 
 
+
+## Set correct PHP CLI version
+
+    $  sudo update-alternatives --config php
