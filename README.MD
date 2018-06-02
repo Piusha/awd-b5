@@ -32,7 +32,7 @@ you can use bellow configuration file in order to serve simple web page
         
     }
 
-# configur fastcgi with php
+# configure fastcgi with php
 
 Inorder to execute php we need to configur nginx as follow. you need to edit your site configuration file as follows
 
@@ -53,9 +53,9 @@ Inorder to execute php we need to configur nginx as follow. you need to edit you
             
             
             fastcgi_pass unix:/run/php/php5.6-fpm.sock;
-           fastcgi_index index.php;
-          fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-         include fastcgi_params;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
 
             #fastcgi_param QUERY_STRING      $query_string;
             fastcgi_param SCRIPT_NAME $fastcgi_script_name;
@@ -90,8 +90,7 @@ In order to stop current php version
 
     $ sudo /etc/init.d/php5.6-fpm stop
 
-Once you start correct php version you need to chege
+Once you start correct php version you need to change following file based on the current active php version
 
     fastcgi_pass unix:/run/php/php7.1-fpm.sock 
-    
-file based on the current active php version
+
