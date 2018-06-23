@@ -13,3 +13,7 @@ get latest [nodeJS](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/) v
 
 to install bower fron end package manager follw the instruction from this site
 https://bower.io/
+
+# Laravel Elequent Query
+
+(reffer)[https://laravel.com/docs/5.5/eloquent]

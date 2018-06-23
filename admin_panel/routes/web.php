@@ -24,3 +24,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users', 'User\UsersController@index')->name('users');
+Route::get('/users/{id}', 'User\UsersController@getUser')->name('get_user');
+Route::post('/users/edit/{id}', 'User\UsersController@edit')->name('get_user');
