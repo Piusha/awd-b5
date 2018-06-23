@@ -29,4 +29,12 @@ class UsersController extends Controller
         
         
     }
+
+    public function getUsers(){
+        $users = User::all(['name','id','email']);
+
+        return response($users);
+    }
+
+
 }

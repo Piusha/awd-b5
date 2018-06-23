@@ -3,6 +3,7 @@
 @section('content')
     <div class="content-box-large">
         <div class="panel-body">
+        <a href="javascript:void(0)" class="load-users">Load Users</a>
 		  	<table class="table">
 				<thead>
 				    <tr>
@@ -11,15 +12,8 @@
                         <th>Email</th>
                     </tr>
                 </thead>
-                <tbody>
-                @foreach ($users as $user)
-                    <tr>
-                        <td><a href="/users/{{$user->id}}">{{$user->id}}</a></td>
-                        <td>{{$user->name}}</td>
-                        <td>{{$user->email}}</td>
-                    </tr>
-                @endforeach
-                    
+                <tbody id="tb_data_wrapper">
+                
 				                
                 </tbody>
             </table>
