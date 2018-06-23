@@ -13,8 +13,17 @@
       @include('includes.header')
 	</div>
 
-	<div class="page-content container">
-        @yield('content')
+	<div class="page-content">
+        <div class="row">
+            <div class="col-md-2">
+                @include('includes.sidenav')
+            </div>
+            <div class="col-md-10">
+                @yield('content')
+            </div>
+
+        </div>
+        
 	</div>
 
 

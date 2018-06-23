@@ -15,6 +15,12 @@ Route::get('/',function () {
     return redirect(route('login'));
 });
 
+Route::get('/test',function () {
+    return "THis istest without login";
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/users', 'User\UsersController@index')->name('users');
