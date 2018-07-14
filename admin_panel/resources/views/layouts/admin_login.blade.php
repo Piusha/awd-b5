@@ -17,6 +17,9 @@
         @yield('content')
 	</div>
 
+
+<script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+   
   @yield('js');
 
 

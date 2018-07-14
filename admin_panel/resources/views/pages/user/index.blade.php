@@ -20,3 +20,8 @@
         </div>
     </div>
 @endsection
+
+
+@section('js')
+<script src="{{ asset('js/users.js') }}"></script>
+@endsection

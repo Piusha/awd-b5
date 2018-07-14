@@ -33,6 +33,6 @@
     <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
     <script src="{{ asset('js/app.js') }}"></script>
-
+    @yield('js');
   </body>
 </html>

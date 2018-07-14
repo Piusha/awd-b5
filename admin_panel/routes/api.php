@@ -17,4 +17,12 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::get('/users', 'User\UsersController@getUsers');
+
+
+Route::post('/users', 'User\UsersController@create');
+Route::post('/users/login', 'User\UsersController@doLogin');
+
+
+Route::group(['middleware' => ['apiauth']], function () {
+    Route::get('/users', 'User\UsersController@getUsers');
+});

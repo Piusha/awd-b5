@@ -11,18 +11,6 @@
 |
 */
 
-Route::get('/',function () {
-    return redirect(route('login'));
-});
-
-Route::get('/test',function () {
-    return "THis istest without login";
-});
-
-Auth::routes();
-
+Route::get('/', 'User\UsersController@loginView')->name('login');
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/users', 'User\UsersController@index')->name('users');
-Route::get('/users/{id}', 'User\UsersController@getUser')->name('get_user');
-Route::post('/users/edit/{id}', 'User\UsersController@edit')->name('get_user');
+Route::get('/users', 'User\UsersController@index')->name('login');
