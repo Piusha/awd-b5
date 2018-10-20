@@ -47,11 +47,14 @@ Restart Apache Server
 to get more information how to configure multiple sites on the ubuntu
 
 
-## Install PHP7
+## Install PHP7.*
 
-    [Install PHP 2.7](https://www.rosehosting.com/blog/how-to-install-php-7-2-on-ubuntu-16-04/)
+   https://www.rosehosting.com/blog/how-to-install-php-7-2-on-ubuntu-16-04/
 
 
+## Install MySql
+    
+    https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04
 
 
 
