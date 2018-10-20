@@ -49,7 +49,7 @@ to get more information how to configure multiple sites on the ubuntu
 
 ## Install PHP7
 
-    $ sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip
+    (Install PHP 2.7)[https://www.rosehosting.com/blog/how-to-install-php-7-2-on-ubuntu-16-04/]
 
 
 
