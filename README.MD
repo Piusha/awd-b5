@@ -49,7 +49,7 @@ to get more information how to configure multiple sites on the ubuntu
 
 ## Install PHP7
 
-    (Install PHP 2.7)[https://www.rosehosting.com/blog/how-to-install-php-7-2-on-ubuntu-16-04/]
+    [Install PHP 2.7](https://www.rosehosting.com/blog/how-to-install-php-7-2-on-ubuntu-16-04/)
 
 
 
